@@ -33,3 +33,38 @@ const render = require("./lib/htmlRenderer");
 // for further information. Be sure to test out each class and verify it generates an
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work! ```
+
+
+const createProfile => () {
+    inquirer.
+        prompt([
+            {
+                type: 'input',
+                message: 'Please enter your name',
+                name: 'name',
+            },
+
+            {
+                type: 'input',
+                message: 'Please select your role',
+                choices: ['manager', 'engineer', 'employee', 'intern'],
+                name: 'role',
+            }
+
+            {
+                type: 'number',
+                message: 'Please enter your ID number',
+                name: 'id',
+            },
+
+            {
+                type: 'input',
+                message: 'Please enter your email',
+                name: 'email',
+            },
+
+            {
+                type: 'number',
+                message: 'Please enter your office number',
+                name: 'officeNumber',
+            },
