@@ -35,7 +35,7 @@ const render = require("./lib/htmlRenderer");
 // for the provided `render` function to work! ```
 
 
-const createProfile => () {
+const createProfile = () => {
     inquirer.
         prompt([
             {
@@ -67,4 +67,4 @@ const createProfile => () {
                 type: 'number',
                 message: 'Please enter your office number',
                 name: 'officeNumber',
-            },
+            };
