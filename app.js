@@ -9,6 +9,7 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
+const employees = [];
 
 
 // Write code to use inquirer to gather information about the development team members,
@@ -63,7 +64,7 @@ const createProfile = () => {
             },
 
             {
-                type: 'input',
+                type: 'list',
                 message: 'Please select your role',
                 choices: ['manager', 'engineer', 'employee', 'intern'],
                 name: 'role',
@@ -72,5 +73,33 @@ const createProfile = () => {
 
             switch (role) {
                 case 'manager':
+                    const officeNumber = inquirer.prompt([
+                        {
+                        type: 'input',
+                        name: 'officeNumber',
+                        message: "What is the manager's office number?",
+                        }
+                    ]);
+                    break;
 
-            }
+                case 'engineer':
+                    const github = inquirer.prompt([
+                        {
+                        type: 'input',
+                        name: 'github',
+                        message: "Please enter the engineer's Github username",
+                        }
+                    ]);
+                    break;
+
+                case 'intern':
+                    const school = inquirer.prompt([
+                        {
+                        type: 'input',
+                        name: 'school',
+                        message: 'What school does the intern attend?',
+                        }
+                    ]);
+                    break;
+                }
+            },
