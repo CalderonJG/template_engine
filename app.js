@@ -45,13 +45,6 @@ const createProfile = () => {
             },
 
             {
-                type: 'input',
-                message: 'Please select your role',
-                choices: ['manager', 'engineer', 'employee', 'intern'],
-                name: 'role',
-            }
-
-            {
                 type: 'number',
                 message: 'Please enter your ID number',
                 name: 'id',
@@ -67,4 +60,17 @@ const createProfile = () => {
                 type: 'number',
                 message: 'Please enter your office number',
                 name: 'officeNumber',
-            };
+            },
+
+            {
+                type: 'input',
+                message: 'Please select your role',
+                choices: ['manager', 'engineer', 'employee', 'intern'],
+                name: 'role',
+            },
+        ])
+
+            switch (role) {
+                case 'manager':
+
+            }
